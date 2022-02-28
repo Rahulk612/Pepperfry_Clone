@@ -11,9 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
     <BrowserRouter>
-    {/* <CreateContextProvider> */}
     <App />
-    {/* </CreateContextProvider> */}
     </BrowserRouter>
     </ReduxProvider>
   </React.StrictMode>,
