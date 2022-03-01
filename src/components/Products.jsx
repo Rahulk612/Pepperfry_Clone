@@ -4,8 +4,8 @@ import { ProductsGrid } from "./ProductsGrid";
 import { ProductsSort } from "./ProductsSort";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import {useState}  from "react"
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+// import {useState}  from "react"
+import { useParams } from "react-router-dom";
 
 export const Products = ({query}) => {
   const {id} = useParams()

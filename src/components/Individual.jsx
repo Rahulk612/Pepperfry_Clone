@@ -1,5 +1,5 @@
 import "../Styles/Individual.css";
-import { Settees } from "../add_data";
+// import { Settees } from "../add_data";
 import Zoom from "react-img-zoom";
 import {
   MdOutlineKeyboardArrowRight,

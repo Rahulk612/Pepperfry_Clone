@@ -1,8 +1,8 @@
 import { Card } from "./Card"
 import {getProducts} from "../Redux/ProductsList/actions"
-import {useEffect,useState,createContext} from "react"
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
-import axios from "axios"
+import {useEffect,useState} from "react"
+import { useDispatch, useSelector } from "react-redux";
+// import axios from "axios"
 export const ProductsGrid = ({ query,q}) => {
   const [temp, cartTemp] = useState(
     JSON.parse(localStorage.getItem("cartItems")) || []

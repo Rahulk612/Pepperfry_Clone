@@ -9,7 +9,6 @@ import {
   RangeSliderFilledTrack,
   RangeSliderThumb,
 } from "@chakra-ui/react";
-import { Settees } from "../add_data";
 import {
   getProducts,
   highPrice,
@@ -19,10 +18,9 @@ import {
   UnderOrAbove,
   discount,
 } from "../Redux/ProductsList/actions";
-import {PriceRangeFn} from "../Redux/ProductsList/reducer"
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
-import axios from "axios"
+import { useDispatch, useSelector} from "react-redux";
+// import axios from "axios"
 export const ProductsSort = () => {
   const [radio, setRadio] = useState("Relevance");
   const [check, setCheck] = useState([]);
@@ -31,7 +29,7 @@ export const ProductsSort = () => {
   const [material, setMaterial] = useState([]);
   const [discountP, setDiscount] = useState("");
 
-  const { main, loading, cartItems,brands } = useSelector((store) => store.data);
+  const {brands } = useSelector((store) => store.data);
   const dispatch = useDispatch();
 
   useEffect(() => {

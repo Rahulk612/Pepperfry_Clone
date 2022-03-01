@@ -1,9 +1,9 @@
 import { Checkbox } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 
-export const Carttotal = ({ data }) => {
+export const Carttotal = () => {
     // const [cartTotal,setTotal] = useState((data) || (JSON.parse(localStorage.getItem("CartTotal"))))
 
 
