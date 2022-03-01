@@ -4,7 +4,7 @@ import Zoom from "react-img-zoom";
 import {
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 import { BsHeart, BsStarFill} from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { Header } from "./Header";
