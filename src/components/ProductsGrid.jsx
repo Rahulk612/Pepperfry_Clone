@@ -3,7 +3,7 @@ import {getProducts} from "../Redux/ProductsList/actions"
 import {useEffect,useState} from "react"
 import { useDispatch, useSelector } from "react-redux";
 // import axios from "axios"
-export const ProductsGrid = ({ query,q}) => {
+export const ProductsGrid = ({ q}) => {
   const [temp, cartTemp] = useState(
     JSON.parse(localStorage.getItem("cartItems")) || []
   );
