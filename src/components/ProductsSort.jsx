@@ -35,6 +35,7 @@ export const ProductsSort = () => {
   useEffect(() => {
     getProductsData();
   }, []);
+
   const getProductsData = () => {
     dispatch(getProducts());
   };
@@ -42,26 +43,26 @@ export const ProductsSort = () => {
 
 
   // For Brands Checks
-   useEffect(() => {
-     BrandSorting();
-   }, [check]);
+  //  useEffect(() => {
+  //    BrandSorting();
+  //  }, [check]);
 
 
   //  For PriceSoritng
-  useEffect(()=>{
-    Higher_Price()
-  },[])
+  // useEffect(()=>{
+  //   Higher_Price()
+  // },[])
 
   // For  Pice Range
-  useEffect(() => {
-    PriceRange();
-  }, [price]);
+  // useEffect(() => {
+  //   PriceRange();
+  // }, [price]);
 
 
   // For Discount
-  useEffect(() => {
-    DiscountFn()
-  }, [discountP]);
+  // useEffect(() => {
+  //   DiscountFn()
+  // }, [discountP]);
 
   const Higher_Price = (value) => {
     if (value === "Highest"){
