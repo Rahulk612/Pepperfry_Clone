@@ -34,7 +34,7 @@ export const Products = ({query}) => {
         <h1 className="heroName">{capitalizeFirstLetter(id)}</h1>
         <div></div>
         <div className="productsDiv">
-          <ProductsSort />
+          {/* <ProductsSort /> */}
           <ProductsGrid query={query} q={id} />
         </div>
       </div>
