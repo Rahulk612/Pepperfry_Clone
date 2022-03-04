@@ -1,6 +1,6 @@
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import "../Styles/Products.css";
-import { ProductsGrid } from "./ProductsGrid";
+// import { ProductsGrid } from "./ProductsGrid";
 // import { ProductsSort } from "./ProductsSort";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -35,7 +35,7 @@ export const Products = ({query}) => {
         <div></div>
         <div className="productsDiv">
           {/* <ProductsSort /> */}
-          <ProductsGrid query={query} q={id} />
+          {/* <ProductsGrid query={query} q={id} /> */}
         </div>
       </div>
       <Footer />
