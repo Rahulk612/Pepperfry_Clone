@@ -35,7 +35,7 @@ export const ProductsSort = () => {
   useEffect(() => {
     getProductsData();
   }, []);
-
+  
   const getProductsData = () => {
     dispatch(getProducts());
   };
@@ -43,52 +43,47 @@ export const ProductsSort = () => {
 
 
   // For Brands Checks
-  //  useEffect(() => {
-  //    BrandSorting();
-  //  }, [check]);
+   useEffect(() => {
+     BrandSorting();
+   }, [check]);
 
-
-  //  For PriceSoritng
-  // useEffect(()=>{
-  //   Higher_Price()
-  // },[])
 
   // For  Pice Range
-  // useEffect(() => {
-  //   PriceRange();
-  // }, [price]);
+  useEffect(() => {
+    PriceRange();
+  }, [price]);
 
 
   // For Discount
-  // useEffect(() => {
-  //   DiscountFn()
-  // }, [discountP]);
+  useEffect(() => {
+    DiscountFn()
+  }, [discountP]);
 
-  // const Higher_Price = (value) => {
-  //   if (value === "Highest"){
-  //     dispatch(highPrice());
-  //   }else if(value==="Lowest"){
-  //     dispatch(lowPrice());
-  //   }else if(value==="Fastest"){
-  //       dispatch(fastestShipping())
-  //   }else if(value==="Newest"){
+  const Higher_Price = (value) => {
+    if (value === "Highest"){
+      dispatch(highPrice());
+    }else if(value==="Lowest"){
+      dispatch(lowPrice());
+    }else if(value==="Fastest"){
+        dispatch(fastestShipping())
+    }else if(value==="Newest"){
 
-  //   }
-  // }
-
-
-  // const BrandSorting = () => {
-  //     dispatch(brandFn(check));
-  // }
+    }
+  }
 
 
-  // const PriceRange = () => {
-  //     dispatch(UnderOrAbove(price))
-  // }
+  const BrandSorting = () => {
+      dispatch(brandFn(check));
+  }
 
-  // const DiscountFn = () => {
-  //   dispatch(discount(discountP));
-  // }
+
+  const PriceRange = () => {
+      dispatch(UnderOrAbove(price))
+  }
+
+  const DiscountFn = () => {
+    dispatch(discount(discountP));
+  }
 
 
   return (
@@ -98,7 +93,7 @@ export const ProductsSort = () => {
         defaultValue="Relevance"
         onChange={setRadio}
         onClick={(e) => {
-          // Higher_Price(e.target.value);
+          Higher_Price(e.target.value);
         }}
         value={radio}
         colorScheme="orange"
