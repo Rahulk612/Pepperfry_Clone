@@ -9,20 +9,24 @@ import { BsHeart, BsStarFill} from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 export const SingleProduct = () => {
+   let navigate = useNavigate();
   const [items,setItems] = useState((JSON.parse(localStorage.getItem("cartItems"))) || {})
   const item = JSON.parse(localStorage.getItem("indProduct"));
-  const [option, setOPtion] = useState("1");
+  // const [option, setOPtion] = useState("1");
   // let item = Settees[0];
 
    useEffect(() => {
      localStorage.setItem("cartItems", JSON.stringify(items));
    }, [items]);
    const handleCart = (data) => {
+
      if (!items.includes(data)) {
        setItems([...items, data]);
      }
+      // navigate("/cart")
     //  console.log("carttemp", items);
    };
   return (
@@ -184,7 +188,7 @@ export const SingleProduct = () => {
                     className="indBuyNow"
                     onClick={() => {
                       handleCart(item);
-                      window.location.href = "/cart";
+                      navigate("/cart");
                     }}
                   >
                     BUY NOW

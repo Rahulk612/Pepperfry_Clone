@@ -1,7 +1,7 @@
 import { Checkbox } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 
 export const Carttotal = () => {
     // const [cartTotal,setTotal] = useState((data) || (JSON.parse(localStorage.getItem("CartTotal"))))
@@ -54,13 +54,10 @@ export const Carttotal = () => {
             Entering Your Companies GSTIN.
           </p>
         </div>
-        <div
-          className="itemPlcaeOrder"
-          onClick={() => {
-            window.location.href = "/checkout";
-          }}
-        >
-          <h1>PLACE ORDER</h1>
+        <div className="itemPlcaeOrder">
+          <Link to="/checkout">
+            <h1>PLACE ORDER</h1>
+          </Link>
         </div>
       </div>
     </>
