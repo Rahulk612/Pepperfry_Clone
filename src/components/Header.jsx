@@ -57,10 +57,7 @@ export const Header = () => {
       <div id="header">
         <div id="head1">
           <Link to="/" id="img11">
-            <img
-              src="https://cdn.freelogovectors.net/wp-content/uploads/2019/02/pepperfry-logo.png"
-              alt=""
-            />
+            <img src="https://i.imgur.com/KQ0SkcM.png" alt="" />
           </Link>
           <div className="img12">
             <Link to="/products/seettes" className="nam">
