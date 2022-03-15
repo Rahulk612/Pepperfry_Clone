@@ -1,16 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import { Products} from './components/Products';
-import {Footer} from "./components/Footer"
+import { Products} from './components/ProductsPage/Products';
+// import {Footer} from "./components/Footer"
 import { ChakraProvider } from "@chakra-ui/react";
-import { SingleProduct } from './components/Individual';
+import { SingleProduct } from './components/IndividualPage/Individual';
 import { Routes, Route} from "react-router-dom";
-import {Home} from "./components/Home"
-import { Login } from './components/Login';
-import { Cart } from './components/Cart';
-import { Checkout } from './components/Checkout';
-import { Payment } from './components/Payment';
-import { ThankYou } from './components/ThankYou';
+import {Home} from "./components/LandingPage/Home"
+import { Login } from './components/LandingPage/Login';
+import { Cart } from './components/CartPage/Cart';
+import { Checkout } from './components/CartPage/Checkout';
+import { Payment } from './components/CartPage/Payment';
+import { ThankYou } from './components/CartPage/ThankYou';
 
 function App() {
   return (

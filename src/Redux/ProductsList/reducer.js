@@ -15,6 +15,7 @@ import {
   Get_Data_Loading,
   Get_Data_Success,
   Empty_Store,
+  Cart_Items,
 } from "./actionTypes";
 
 const init = {
@@ -95,6 +96,11 @@ export const ProductReducer = (store = init,{type,payload}) => {
           loading: false,
           cartItems: DeletFromCart(store.cartItems, payload),
         };
+
+      case Cart_Items:
+        return{
+          ...store,loading:false,cartItems:payload
+        }
       default:
         return { ...store };
     }

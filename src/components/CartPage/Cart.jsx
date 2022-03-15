@@ -8,37 +8,40 @@ import {
   getProducts,
   delFromCart,
   addToCart,
-} from "../Redux/ProductsList/actions";
+  getCartProducts,
+} from "../../Redux/ProductsList/actions";
 import { Carttotal } from "./CartTotal";
 
 
 
 export const Cart = () => {
-  const [data, setData] = useState(
-    JSON.parse(localStorage.getItem("cartItems")) || []
-  );
+  const [data, setData] = useState([]);
   const user = JSON.parse(localStorage.getItem("userName"));
 
   const { cartItems } = useSelector((store) => store.data);
-
+console.log("cartUser", user._id);
 
   const dispatch = useDispatch()
   useEffect(() => {
     getProductsData();
   }, []);
   const getProductsData = () => {
-    dispatch(getProducts());
+    console.log("cartUser",user._id)
+    dispatch(getCartProducts(user._id));
+    console.log(cartItems)
   };
 
 
   useEffect(()=>{
-    cartAdding()
-  },[])
+    setData(cartItems);
+    // console.log(cartItems)
+    console.log("data",data.length)
+  },[cartItems])
 
-  useEffect(() => {
-    localStorage.setItem("cartItems",JSON.stringify(cartItems));
-    setData(cartItems)
-  }, [cartItems]);
+  // useEffect(() => {
+  //   localStorage.setItem("cartItems",JSON.stringify(cartItems));
+  //   setData(cartItems)
+  // }, [cartItems]);
 
   const cartAdding = () => {
     data.forEach((e)=>{
@@ -75,7 +78,7 @@ export const Cart = () => {
           <div className="cartContainerDiv">
             <div className="itemsCartContainer">
               {data.map((item) => {
-                return <ItemCartCard key={item._id} data={item} handleCart={handleCart} />;
+                return <ItemCartCard key={item._id} data={item.item} handleCart={handleCart} />;
               })}
             </div>
             <div className="itemCartPrice">

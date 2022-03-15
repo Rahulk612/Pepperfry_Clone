@@ -1,9 +1,9 @@
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import "../Styles/Products.css";
+import "./Products.css";
 import { ProductsGrid } from "./ProductsGrid";
 import { ProductsSort } from "./ProductsSort";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import { Header } from "../Header&Footer/Header";
+import { Footer } from "../Header&Footer/Footer";
 // import {useState}  from "react"
 import { useParams } from "react-router-dom";
 

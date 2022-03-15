@@ -1,4 +1,4 @@
-import "../Styles/Individual.css";
+import "./Individual.css";
 // import { Settees } from "../add_data";
 import Zoom from "react-img-zoom";
 import {
@@ -7,8 +7,8 @@ import {
 // import {Link} from "react-router-dom"
 import { BsHeart, BsStarFill} from "react-icons/bs";
 import { useState, useEffect } from "react";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import { Header } from "../Header&Footer/Header";
+import { Footer } from "../Header&Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
 export const SingleProduct = () => {

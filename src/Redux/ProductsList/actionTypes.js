@@ -42,3 +42,6 @@ export const Get_Data_Success = "Get_Data_Success";
 
 export const Empty_Store = "Empty_Store";
 
+
+export const Cart_Items = "Cart_Items"
+

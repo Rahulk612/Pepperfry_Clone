@@ -1,6 +1,6 @@
 import "./Login.css";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import { Header } from "../Header&Footer/Header";
+import { Footer } from "../Header&Footer/Footer";
 import axios from "axios"
 import { useState,useEffect } from "react";
 

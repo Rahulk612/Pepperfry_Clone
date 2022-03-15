@@ -68,20 +68,21 @@ function TotalCartValue(data, payload) {
   let total = 0;
   if (payload === "offer") {
     for (var i = 0; i < data.length; i++) {
-      total += data[i].orgPrice;
+      total += data[i].item.orgPrice;
     }
     return total;
   } else if (payload === "discount") {
     total = 0;
     for (var j = 0; j < data.length; j++) {
-      total += Math.round((data[j].orgPrice * data[j].offer) / 100);
+      total += Math.round((data[j].item.orgPrice * data[j].item.offer) / 100);
     }
     return total;
   } else {
     total = 0;
     for (var k = 0; k < data.length; k++) {
       total +=
-        data[k].orgPrice - Math.round((data[k].orgPrice * data[k].offer) / 100);
+        data[k].item.orgPrice -
+        Math.round((data[k].item.orgPrice * data[k].item.offer) / 100);
     }
     return total;
   }

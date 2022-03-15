@@ -17,7 +17,7 @@ import {
   brandFn,
   UnderOrAbove,
   discount,
-} from "../Redux/ProductsList/actions";
+} from "../../Redux/ProductsList/actions";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector} from "react-redux";
 // import axios from "axios"

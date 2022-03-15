@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Styles/Payments.css";
+import "./Payments.css";
 import {Link} from "react-router-dom";
 
 
@@ -82,7 +82,8 @@ function TotalCartValue(data) {
   
     for (var k = 0; k < data.length; k++) {
       total +=
-        data[k].orgPrice - Math.round((data[k].orgPrice * data[k].offer) / 100);
+        data[k].item.orgPrice -
+        Math.round((data[k].item.orgPrice * data[k].item.offer) / 100);
     }
     return total;
   

@@ -1,13 +1,15 @@
 import { Card } from "./Card"
-import { getProducts, get_Data_Loading,empty_Store } from "../Redux/ProductsList/actions";
+import { getProducts, get_Data_Loading,empty_Store } from "../../Redux/ProductsList/actions";
 import {useEffect,useState} from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { Load } from "./Load";
+import axios from "axios";
 // import axios from "axios"
 export const ProductsGrid = ({ q}) => {
   const [load] = useState([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
-  const [temp, cartTemp] = useState(
-    JSON.parse(localStorage.getItem("cartItems")) || []
+
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("userName")) || ""
   );
   const { data, loading } = useSelector((store) => store.data);
   const dispatch = useDispatch();
@@ -17,20 +19,21 @@ export const ProductsGrid = ({ q}) => {
   }, []);
 
   useEffect(()=>{
-    console.log(loading)
   },[loading])
   const getProductsData = () => {
     dispatch(get_Data_Loading());
       dispatch(getProducts(q));
   };
 
-  useEffect(()=>{
-    localStorage.setItem("cartItems", JSON.stringify(temp));
-  },[temp])
   const handleCart = (data) => {
-    if(!temp.includes(data)){
-      cartTemp([...temp, data]);
-    }
+    const post = {
+      user_id:user._id,
+      item:data
+    };
+    axios
+      .post("https://backend-pepperfry.herokuapp.com/pepperfry/cartItems", post)
+      .then((res) => res)
+      .then((fata) => console.log(fata.data));
   };
   return loading || data.length<1 ? (
     <div className="productsGridLoad">

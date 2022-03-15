@@ -1,4 +1,4 @@
-import "../Styles/Checkout.css";
+import "./Checkout.css";
 import { Carttotal } from "./CartTotalForPayment";
 import { Link } from "react-router-dom";
 import {CartHeader} from "./CartHeader";

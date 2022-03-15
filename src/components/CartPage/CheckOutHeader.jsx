@@ -13,7 +13,7 @@ export const CartHeader = ({ user }) => {
           />
         </div>
         <div className="statusCart">
-          <div className="headerCartIcon" style={}>
+          <div className="headerCartIcon">
             <BsCart3 style={{ fontSize: "20px", marginLeft: "5px" }} />
             <h1>Cart</h1>
           </div>
