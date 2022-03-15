@@ -44,7 +44,7 @@ export const Header = () => {
     if(formData){
       axios
         .post(
-          "http://backend-pepperfry.herokuapp.com/pepperfry/registration",
+          "https://backend-pepperfry.herokuapp.com/pepperfry/registration",
           formData
         )
         .then((res) => setUser(res.data))
