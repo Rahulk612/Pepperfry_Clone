@@ -33,7 +33,7 @@ export const ProductsGrid = ({ q}) => {
     axios
       .post("https://backend-pepperfry.herokuapp.com/pepperfry/cartItems", post)
       .then((res) => res)
-      .then((fata) => console.log(fata.data));
+      .catch((err)=>console.log(err));
   };
   return loading || data.length<1 ? (
     <div className="productsGridLoad">
